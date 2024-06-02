@@ -1,9 +1,11 @@
+import NotePicker from "@/app/components/NotePicker";
+
 const Home = () => {
-    return (
-        <main>
-            <h2>Home</h2>
-        </main>
-    );
-}
+  return (
+    <main>
+      <NotePicker />
+    </main>
+  );
+};
 
 export default Home;
