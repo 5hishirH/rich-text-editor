@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-toggle": "^1.0.3",
     "@tiptap/extension-heading": "^2.4.0",
     "@tiptap/extension-underline": "^2.4.0",
     "@tiptap/pm": "^2.4.0",
