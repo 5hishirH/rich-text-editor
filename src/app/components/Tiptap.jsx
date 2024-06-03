@@ -13,7 +13,7 @@ const Tiptap = ({ handleChange, content }) => {
       StarterKit,
       Heading.configure({
         HTMLAttributes: {
-          class: "text-xl font-semibold",
+          class: "text-xl font-medium",
           levels: [2],
         },
       }),
