@@ -9,7 +9,7 @@ const Toolbar = ({ editor, content }) => {
     return null;
   }
   return (
-    <div className="flex justify-start items-center gap-4 p-1 border rounded-lg">
+    <div className="flex justify-start items-center gap-4 p-1 border border-primary rounded-lg">
       <Toggle
         pressed={editor.isActive("bold")}
         onPressedChange={() => editor.chain().focus().toggleBold().run()}

@@ -33,7 +33,7 @@ const Tiptap = ({ handleChange, content }) => {
 
     editorProps: {
       attributes: {
-        class: "mt-4 border rounded-lg outline-none p-4",
+        class: "mt-4 border border-primary rounded-lg outline-none p-4",
       },
     },
 
