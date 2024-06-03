@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.canary > h2 {
+    @apply text-2xl font-medium
+}
+
+.canary > p {
+    @apply mb-4
+}
+
+.canary > ul {
+    @apply list-disc ml-4
+}
