@@ -3,8 +3,9 @@
 import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Toolbar from "@/app/components/Toolbar";
-import Underline from "@tiptap/extension-underline";
 import Heading from "@tiptap/extension-heading";
+import BulletList from "@tiptap/extension-bullet-list";
+import OrderedList from "@tiptap/extension-ordered-list";
 
 const Tiptap = ({ onChange, content }) => {
   const handleChange = (newContent) => {
@@ -14,18 +15,29 @@ const Tiptap = ({ onChange, content }) => {
   const editor = useEditor({
     extensions: [
       StarterKit,
-      Underline,
       Heading.configure({
         HTMLAttributes: {
           class: "text-xl font-semibold",
           levels: [2],
         },
       }),
+
+      BulletList.configure({
+        HTMLAttributes: {
+          class: "ml-6 list-disc",
+        },
+      }),
+
+      OrderedList.configure({
+        HTMLAttributes: {
+          class: "ml-6 list-decimal",
+        },
+      }),
     ],
+
     editorProps: {
       attributes: {
-        class:
-          "flex flex-col px-4 py-3 justify-start border-b border-r border-l border-gray-700 text-gray-400 items-start w-full gap-3 font-medium text-[16px] pt-4 rounded-bl-md rounded-br-md outline-none",
+        class: "mt-4 border rounded-lg outline-none p-4",
       },
     },
 
