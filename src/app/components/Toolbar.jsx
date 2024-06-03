@@ -9,12 +9,12 @@ const Toolbar = ({ editor, content }) => {
     return null;
   }
   return (
-    <div className="flex justify-start items-center gap-4 border rounded-lg">
+    <div className="flex justify-start items-center gap-4 p-1 border rounded-lg">
       <Toggle
         pressed={editor.isActive("bold")}
         onPressedChange={() => editor.chain().focus().toggleBold().run()}
       >
-        <Bold />
+        <Bold className="w-4 h-4" />
       </Toggle>
 
       <Toggle
@@ -23,7 +23,7 @@ const Toolbar = ({ editor, content }) => {
           editor.chain().focus().toggleHeading({ level: 2 }).run();
         }}
       >
-        <Heading2 />
+        <Heading2 className="w-4 h-4" />
       </Toggle>
 
       <Toggle
@@ -32,7 +32,7 @@ const Toolbar = ({ editor, content }) => {
           editor.chain().focus().toggleBulletList().run();
         }}
       >
-        <List />
+        <List className="w-4 h-4" />
       </Toggle>
 
       <Toggle
@@ -41,7 +41,7 @@ const Toolbar = ({ editor, content }) => {
           editor.chain().focus().toggleOrderedList().run();
         }}
       >
-        <ListOrdered />
+        <ListOrdered className="w-4 h-4" />
       </Toggle>
 
       <Toggle
@@ -50,7 +50,7 @@ const Toolbar = ({ editor, content }) => {
           editor.chain().focus().undo().run();
         }}
       >
-        <Undo />
+        <Undo className="w-4 h-4" />
       </Toggle>
 
       <Toggle
@@ -59,7 +59,7 @@ const Toolbar = ({ editor, content }) => {
           editor.chain().focus().redo().run();
         }}
       >
-        <Redo />
+        <Redo className="w-4 h-4" />
       </Toggle>
     </div>
   );

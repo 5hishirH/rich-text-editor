@@ -7,11 +7,7 @@ import Heading from "@tiptap/extension-heading";
 import BulletList from "@tiptap/extension-bullet-list";
 import OrderedList from "@tiptap/extension-ordered-list";
 
-const Tiptap = ({ onChange, content }) => {
-  const handleChange = (newContent) => {
-    onChange(newContent);
-  };
-
+const Tiptap = ({ handleChange, content }) => {
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -47,7 +43,7 @@ const Tiptap = ({ onChange, content }) => {
   });
 
   return (
-    <div className="w-full px-4">
+    <div className="w-full">
       <Toolbar editor={editor} content={content} />
       <EditorContent editor={editor} />
     </div>
